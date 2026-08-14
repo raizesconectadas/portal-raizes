@@ -1,4 +1,4 @@
-/* Reset básico de margens */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +6,15 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Corpo com fundo escuro e elegante */
+/* Corpo com um gradiente moderno, escuro e sofisticado */
 body {
-    background: linear-gradient(135deg, #0b1f14 0%, #132e1f 100%);
+    background: linear-gradient(135deg, #07140e 0%, #0d2317 50%, #123522 100%);
     color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 /* Estilização do Menu Superior */
@@ -21,29 +22,33 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.2);
+    padding: 25px 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Efeito vidro fosco moderno */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .topo-site .logo h2 {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
     color: #4CAF50;
+    font-weight: 700;
 }
 
 .menu a {
-    color: #ffffff;
+    color: #cccccc;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 30px;
     font-size: 0.95rem;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .menu a:hover {
     color: #4CAF50;
 }
 
-/* Conteúdo Principal (Centralizado) */
+/* Conteúdo Principal */
 .conteudo-principal {
     flex: 1;
     display: flex;
@@ -54,13 +59,14 @@ body {
 }
 
 .painel-escolha h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 40px;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: #f0f0f0;
 }
 
-/* Botões de Seleção de Estado */
+/* Botões de Seleção de Estado Profissionais */
 .botoes-estados {
     display: flex;
     flex-direction: column;
@@ -70,24 +76,27 @@ body {
 
 .btn-estado {
     display: block;
-    width: 320px;
-    padding: 15px 0;
-    border: 2px solid #ffffff;
-    border-radius: 30px;
+    width: 340px;
+    padding: 16px 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
     color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 600;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    background-color: transparent;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
 }
 
+/* Efeito Hover Sofisticado */
 .btn-estado:hover {
-    background-color: #ffffff;
-    color: #0b1f14;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
 }
 
 /* Rodapé */
@@ -95,8 +104,8 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.85rem;
-    color: #888888;
-    background-color: rgba(0, 0, 0, 0.2);
+    color: #777777;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Responsividade para celulares */
@@ -104,15 +113,16 @@ footer {
     .topo-site {
         flex-direction: column;
         gap: 15px;
-        padding: 15px;
+        padding: 20px;
     }
     .menu a {
-        margin: 0 10px;
+        margin: 0 12px;
+        font-size: 0.9rem;
     }
     .painel-escolha h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     .btn-estado {
-        width: 260px;
+        width: 280px;
     }
 }
