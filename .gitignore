@@ -1,0 +1,51 @@
+# =========================
+# Sistemas Operacionais
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =========================
+# Editores de Código (IDE)
+# =========================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+
+# =========================
+# Arquivos Temporários / Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# =========================
+# Pastas de Dependências (Caso use Node.js futuramente)
+# =========================
+node_modules/
+jspm_packages/
+
+# =========================
+# Build / Produção (Caso use ferramentas de compilação)
+# =========================
+dist/
+build/
+.output/
+.vercel
