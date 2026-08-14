@@ -1,0 +1,118 @@
+/* Reset básico de margens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo com fundo escuro e elegante */
+body {
+    background: linear-gradient(135deg, #0b1f14 0%, #132e1f 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilização do Menu Superior */
+.topo-site {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.topo-site .logo h2 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #4CAF50;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #4CAF50;
+}
+
+/* Conteúdo Principal (Centralizado) */
+.conteudo-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.painel-escolha h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Botões de Seleção de Estado */
+.botoes-estados {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-estado {
+    display: block;
+    width: 320px;
+    padding: 15px 0;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.btn-estado:hover {
+    background-color: #ffffff;
+    color: #0b1f14;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #888888;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+    .topo-site {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .menu a {
+        margin: 0 10px;
+    }
+    .painel-escolha h1 {
+        font-size: 1.8rem;
+    }
+    .btn-estado {
+        width: 260px;
+    }
+}
