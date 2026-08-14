@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Raízes Conectadas</title>
+    <meta name="description" content="Entre em contato conosco. Tire suas dúvidas, envie sugestões ou solicite suporte técnico. Sua mensagem é importante para nós.">
+    <meta name="keywords" content="contato, suporte, dúvidas, sugestões, atendimento, Raízes Conectadas">
+    <meta name="google-adsense-account" content="ca-pub-3378137347138871">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="assets/css/footer.css">
+    
+    <style>
+        .contact-form {
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-group label i {
+            margin-right: 0.5rem;
+            color: var(--primary-green);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--neutral-light, #F8F9FA);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--neutral-white, #FFFFFF);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-green, #2E7D32);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--neutral-light, #F8F9FA);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-light, rgba(0, 0, 0, 0.1));
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-green, #2E7D32);
+            margin-top: 0.25rem;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--primary-green-dark, #1B5E20);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: var(--text-secondary, #5A6C7D);
+        }
+
+        .contact-item a {
+            color: var(--primary-green, #2E7D32);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            display: none; /* Exibido via JS se houver mensagem de status */
+        }
+
+        .alert-success {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+
+        .alert-error {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+
+        .alert i {
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .contact-item {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                Raízes Conectadas
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="index.html#como-funciona" class="nav-link">Como Funciona</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container text-center">
+                <h1 data-aos="fade-up"><i class="fas fa-envelope"></i> Fale Conosco</h1>
+                <p data-aos="fade-up" data-aos-delay="100">Tire suas dúvidas, envie sugestões ou solicite suporte técnico. Sua mensagem é importante para nós.</p>
+            </div>
+        </section>
+
+        <section class="section content-section">
+            <div class="container">
+                <!-- Div do Alerta acionado por query params no frontend via JS -->
+                <div id="alertBox" class="alert" data-aos="fade-up"></div>
+
+                <div class="content-block" data-aos="fade-up" data-aos-delay="200">
+                    <h2><i class="fas fa-comments"></i> Formulário de Contato</h2>
+                    <p>Preencha o formulário abaixo para entrar em contato conosco. Responderemos o mais rápido possível.</p>
+
+                    <form action="#" method="POST" class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nome Completo:</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+                            <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Assunto da Mensagem:</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Ex: Dúvida sobre Cadastro">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Mensagem Detalhada:</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Descreva seu problema, dúvida ou sugestão aqui."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+                <div class="content-block" data-aos="fade-up" data-aos-delay="300">
+                    <h2><i class="fas fa-headset"></i> Canais de Contato Direto</h2>
+                    <p>Para um atendimento mais rápido, você também pode nos contatar diretamente pelos canais abaixo:</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>E-mail de Suporte</strong>
+                                <p><a href="mailto:suporte@raizesconectadas.com">suporte@raizesconectadas.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Telefone/WhatsApp</strong>
+                                <p><a href="tel:+5586995415945">(86) 99541-5945</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Horário de Atendimento</strong>
+                                <p>Segunda a Sexta, das 9h às 18h (Horário de Brasília)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box" data-aos="fade-up" data-aos-delay="400">
+                    <p><i class="fas fa-heart"></i> Sua opinião é muito importante para nós! Estamos sempre buscando melhorar nossos serviços e atendimento.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Raízes Conectadas</h3>
+                    <p>Conectando agricultores familiares e instituições de ensino para um futuro mais sustentável e próspero.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/raizes_conectadas/" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#inicio">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="cadastro.html">Cadastrar</a></li>
+                        <li><a href="login.html">Entrar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="contato.html">Fale Conosco</a></li>
+                        <li><a href="mailto:suporte@raizesconectadas.com">Suporte Técnico</a></li>
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@raizesconectadas.com</p>
+                    <p><i class="fas fa-phone"></i> (86) 9 8121-8145</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Teresina, Piauí, Brasil</p>
+                    
+                    <h4 style="margin-top: 1.5rem; color: var(--primary-green-light, #4CAF50);">Suporte Técnico</h4>
+                    <p><i class="fas fa-headset"></i> suporte@raizesconectadas.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Raízes Conectadas. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <strong>Alunos CETI Lucas Meireles / IAS Telecomunicações ME</strong> - CNPJ: 57.380.306/0001-38</p>
+                <p>Uma solução tecnológica para o desenvolvimento sustentável da agricultura familiar.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, offset: 100 });
+
+        // Processa parâmetros da URL para alertas (ex: ?status=success&msg=Mensagem)
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        const msg = urlParams.get('msg');
+        const alertBox = document.getElementById('alertBox');
+
+        if (status && msg) {
+            const isSuccess = status === 'success';
+            alertBox.classList.add(isSuccess ? 'alert-success' : 'alert-error');
+            alertBox.innerHTML = `<i class="fas fa-${isSuccess ? 'check-circle' : 'exclamation-triangle'}"></i> ${decodeURIComponent(msg)}`;
+            alertBox.style.display = 'block';
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Scroll to top
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) scrollTop.classList.add('visible');
+            else scrollTop.classList.remove('visible');
+        });
+        scrollTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>
