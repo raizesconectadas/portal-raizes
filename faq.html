@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Perguntas Frequentes | Raízes Conectadas</title>
+    <meta name="description" content="Encontre respostas para as dúvidas mais frequentes sobre a plataforma Raízes Conectadas.">
+    <meta name="keywords" content="FAQ, perguntas frequentes, ajuda, suporte, Raízes Conectadas, agricultura familiar">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS & Footer CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+    <style>
+        /* Variáveis CSS para garantir o estilo do FAQ */
+        :root {
+            --primary-green: #2E7D32;
+            --primary-green-light: #4CAF50;
+            --primary-green-dark: #1B5E20;
+            --secondary-orange: #FF8F00;
+            --secondary-orange-light: #FFA726;
+            --accent-blue: #1976D2;
+            --accent-blue-light: #42A5F5;
+            --neutral-white: #FFFFFF;
+            --neutral-light: #F8F9FA;
+            --neutral-gray: #6C757D;
+            --neutral-dark: #212529;
+            --text-primary: #2C3E50;
+            --text-secondary: #5A6C7D;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-heavy: rgba(0, 0, 0, 0.25);
+            --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary-orange) 0%, var(--secondary-orange-light) 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(46, 125, 50, 0.9) 0%, rgba(76, 175, 80, 0.8) 100%);
+        }
+
+        /* Estilos específicos para a seção FAQ */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--neutral-light);
+        }
+
+        .faq-item {
+            background-color: var(--neutral-white);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--neutral-light);
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #f4f4f4;
+        }
+
+        .faq-question i {
+            color: var(--primary-green);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+
+        .faq-answer.open {
+            max-height: 500px; /* Valor grande o suficiente para o conteúdo */
+            padding: 20px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+
+        .faq-answer ul {
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para o título principal */
+        .faq-header h2 {
+            color: var(--primary-green-dark);
+            margin-bottom: 10px;
+        }
+
+        .faq-header p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+    </style>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                Raízes Conectadas
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="index.html#como-funciona" class="nav-link">Como Funciona</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="text-center faq-header" data-aos="fade-up">
+                    <h2>Perguntas Frequentes (FAQ)</h2>
+                    <p>Encontre respostas rápidas para as dúvidas mais comuns sobre a nossa plataforma e serviços.</p>
+                </div>
+
+                <div class="faq-list">
+                    <!-- Categoria 1: Sobre a Plataforma -->
+                    <h3 style="color: var(--primary-green); margin-top: 40px; margin-bottom: 20px;" data-aos="fade-right">1. Sobre a Plataforma Raízes Conectadas</h3>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <div class="faq-question">
+                            O que é a Raízes Conectadas? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A Raízes Conectadas é uma plataforma digital que conecta <strong>agricultores familiares</strong> a <strong>instituições de ensino</strong> (escolas, universidades, etc.) que buscam adquirir produtos frescos, orgânicos e de qualidade diretamente de produtores locais. Nosso objetivo é promover a agricultura sustentável, fortalecer a economia local e garantir uma alimentação mais saudável para a comunidade escolar.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            Qual é a missão da Raízes Conectadas? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nossa missão é ser a ponte tecnológica que facilita a logística e a comercialização de produtos da agricultura familiar, garantindo transparência, preços justos e acesso a alimentos de alta qualidade para as instituições. Buscamos o desenvolvimento sustentável e a valorização do pequeno produtor.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-question">
+                            A plataforma é gratuita? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>O cadastro e a utilização básica da plataforma para agricultores e instituições são gratuitos. Cobramos uma pequena taxa de serviço sobre as transações concluídas para cobrir os custos operacionais, de manutenção e de melhoria contínua da plataforma. Os detalhes das taxas são transparentes e apresentados antes da finalização de cada pedido.</p>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 2: Para Agricultores Familiares -->
+                    <h3 style="color: var(--primary-green); margin-top: 40px; margin-bottom: 20px;" data-aos="fade-right">2. Para Agricultores Familiares</h3>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <div class="faq-question">
+                            Como posso me cadastrar como agricultor? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>O processo é simples! Acesse a página de <a href="cadastro.html">Cadastro</a> e selecione a opção "Agricultor Familiar". Você precisará fornecer informações sobre sua produção, localização e documentos que comprovem sua atividade. Nossa equipe fará uma breve análise para garantir a qualidade e autenticidade dos produtos.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            Quais produtos posso vender na plataforma? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Você pode vender uma ampla variedade de produtos frescos, orgânicos ou agroecológicos, como:</p>
+                            <ul>
+                                <li>Hortaliças e Legumes</li>
+                                <li>Frutas da estação</li>
+                                <li>Grãos e Cereais</li>
+                                <li>Produtos processados artesanalmente (geleias, pães, queijos)</li>
+                            </ul>
+                            <p>Todos os produtos devem estar em conformidade com as normas sanitárias e de qualidade exigidas pelas instituições compradoras.</p>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 3: Para Instituições de Ensino -->
+                    <h3 style="color: var(--primary-green); margin-top: 40px; margin-bottom: 20px;" data-aos="fade-right">3. Para Instituições de Ensino</h3>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <div class="faq-question">
+                            Como minha escola pode comprar na Raízes Conectadas? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Instituições de ensino (públicas ou privadas) podem se cadastrar na plataforma. Após a aprovação, vocês terão acesso ao catálogo de produtos disponíveis na sua região. O processo de compra é feito online, com a possibilidade de agendamento de entrega e acompanhamento do pedido. É uma excelente forma de cumprir as exigências do PNAE (Programa Nacional de Alimentação Escolar) de forma simplificada.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            Quais são as formas de pagamento aceitas? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Aceitamos diversas formas de pagamento, incluindo:</p>
+                            <ul>
+                                <li>Boleto bancário (para instituições)</li>
+                                <li>Cartão de crédito (Visa, Mastercard, Elo)</li>
+                                <li>Transferência bancária (Pix)</li>
+                            </ul>
+                            <p>As opções podem variar de acordo com o tipo de transação e o acordo firmado com a instituição.</p>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 4: Suporte e Contato -->
+                    <h3 style="color: var(--primary-green); margin-top: 40px; margin-bottom: 20px;" data-aos="fade-right">4. Suporte e Contato</h3>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <div class="faq-question">
+                            Como entro em contato com o suporte técnico? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Se você não encontrou a resposta para sua dúvida, nossa equipe de suporte está pronta para ajudar. Você pode nos contatar através da nossa <a href="contato.html">Central de Ajuda</a> ou enviando um e-mail diretamente para <a href="mailto:suporte@raizesconectadas.com">suporte@raizesconectadas.com</a>. Nosso horário de atendimento é de segunda a sexta, das 8h às 18h (Horário de Brasília).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            Onde posso encontrar a Política de Privacidade e os Termos de Uso? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A transparência é fundamental para nós. Você pode acessar a nossa <a href="politica-privacidade.html">Política de Privacidade</a> e os <a href="termos-de-uso.html">Termos de Uso</a> a qualquer momento através dos links no rodapé do nosso site. É importante que todos os usuários leiam e compreendam estes documentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Raízes Conectadas</h3>
+                    <p>Conectando agricultores familiares e instituições de ensino para um futuro mais sustentável e próspero.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/raizes_conectadas/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#inicio">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="cadastro.html">Cadastrar</a></li>
+                        <li><a href="login.html">Entrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="contato.html">Fale Conosco</a></li>
+                        <li><a href="mailto:suporte@raizesconectadas.com">Suporte Técnico</a></li>
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@raizesconectadas.com</p>
+                    <p><i class="fas fa-phone"></i> (86) 9 8121-8145</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Teresina, Piauí, Brasil</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Raízes Conectadas. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <strong>Alunos CETI Lucas Meireles / IAS Telecomunicações ME</strong> - CNPJ: 57.380.306/0001-38</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Script para funcionalidade de Acordeão do FAQ
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = document.querySelectorAll('.faq-question');
+
+            questions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Fecha todos os outros
+                    document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+                        if (openAnswer !== answer) {
+                            openAnswer.classList.remove('open');
+                            openAnswer.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                            openAnswer.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                        }
+                    });
+
+                    // Abre ou fecha o clicado
+                    answer.classList.toggle('open');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+        });
+        
+        // Outros scripts do rodapé (Scroll to Top, etc.)
+        // O usuário fará a inclusão real no ambiente dele.
+    </script>
+</body>
+</html>
