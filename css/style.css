@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset básico de margens */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +6,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Corpo com um gradiente moderno, escuro e sofisticado */
+/* Corpo com imagem de fundo, sobreposição escura e gradiente profissional */
 body {
-    background: linear-gradient(135deg, #07140e 0%, #0d2317 50%, #123522 100%);
+    background: linear-gradient(rgba(7, 20, 14, 0.85), rgba(13, 35, 23, 0.85)), url('../imagens/fundo-site.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
     min-height: 100vh;
     display: flex;
@@ -17,22 +20,28 @@ body {
     overflow-x: hidden;
 }
 
-/* Estilização do Menu Superior */
+/* Estilização do Menu Superior (Efeito Vidro Fosco) */
 .topo-site {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 60px;
     background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px); /* Efeito vidro fosco moderno */
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.topo-site .logo h2 {
-    font-size: 1.3rem;
-    letter-spacing: 3px;
-    color: #4CAF50;
-    font-weight: 700;
+/* Ajuste do Logotipo */
+.logo .img-logo {
+    height: 45px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s ease;
+}
+
+.logo .img-logo:hover {
+    opacity: 0.8;
 }
 
 .menu a {
@@ -66,7 +75,7 @@ body {
     color: #f0f0f0;
 }
 
-/* Botões de Seleção de Estado Profissionais */
+/* Botões de Seleção de Estado */
 .botoes-estados {
     display: flex;
     flex-direction: column;
@@ -90,7 +99,6 @@ body {
     backdrop-filter: blur(5px);
 }
 
-/* Efeito Hover Sofisticado */
 .btn-estado:hover {
     background-color: #4CAF50;
     border-color: #4CAF50;
