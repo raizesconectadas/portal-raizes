@@ -18,7 +18,7 @@
     --shadow-light: rgba(0, 0, 0, 0.1);
     --shadow-medium: rgba(0, 0, 0, 0.15);
     --shadow-heavy: rgba(0, 0, 0, 0.25);
-    --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green-light) 100%); /*Mudado*/
+    --gradient-primary: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-green-light) 100%);
     --gradient-secondary: linear-gradient(135deg, var(--secondary-orange) 0%, var(--secondary-orange-light) 100%);
     --gradient-hero: linear-gradient(135deg, rgba(46, 125, 50, 0.9) 0%, rgba(76, 175, 80, 0.8) 100%);
 }
@@ -378,6 +378,79 @@ p {
     100% { transform: rotate(360deg); }
 }
 
+/* State Partner Buttons */
+.state-buttons-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.btn-state-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 28px;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-state-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25), 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.state-flag {
+    width: 40px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.state-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.state-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.state-action {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.state-action i {
+    transition: transform 0.3s ease;
+}
+
+.btn-state-card:hover .state-action i {
+    transform: translateX(4px);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
@@ -408,5 +481,15 @@ p {
 
     .page-hero p {
         font-size: 1rem;
+    }
+
+    .state-buttons-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-state-card {
+        width: 100%;
+        max-width: 280px;
     }
 }
