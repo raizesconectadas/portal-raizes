@@ -372,10 +372,42 @@
         });
         scrollTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     </script>
-    <!-- Botão Flutuante e Widget de Doação (LADO ESQUERDO) -->
+    <!-- Botão Flutuante Pulsante e Widget de Doação (LADO ESQUERDO COM ANIMAÇÃO) -->
+<style>
+  /* Define a animação de pulsação suave */
+  @keyframes pulsar-doacao {
+    0% {
+      box-shadow: 0 4px 12px rgba(36, 202, 104, 0.5);
+      transform: scale(1);
+    }
+    50% {
+      /* Aumenta a sombra e o tamanho levemente no meio da animação */
+      box-shadow: 0 6px 20px rgba(36, 202, 104, 0.8);
+      transform: scale(1.03);
+    }
+    100% {
+      box-shadow: 0 4px 12px rgba(36, 202, 104, 0.5);
+      transform: scale(1);
+    }
+  }
+
+  /* Aplica a animação ao botão */
+  #btn-doacao-pulsante {
+    animation: pulsar-doacao 2s infinite; /* 2 segundos de duração, repete para sempre */
+    transition: all 0.3s ease; /* Transição suave para quando passar o mouse */
+  }
+
+  /* Para a animação quando o mouse estiver em cima */
+  #btn-doacao-pulsante:hover {
+    animation: none;
+    background-color: #1eb85e; /* Escurece um pouquinho o verde */
+    transform: scale(1.05); /* Aumenta um pouco mais no hover */
+  }
+</style>
+
 <div id="donation-widget-container" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; font-family: sans-serif;">
   
-  <!-- Janela com o iframe (abrirá alinhada à esquerda) -->
+  <!-- Janela com o iframe (inicia escondida) -->
   <div id="donation-box" style="display: none; width: 350px; height: 550px; background: #fff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); overflow: hidden; position: absolute; bottom: 70px; left: 0;">
     <div style="background: #24ca68; color: #fff; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; font-weight: bold;">
       <span>Apoie esta causa 💚</span>
@@ -384,8 +416,8 @@
     <iframe src="https://caixinhadedoacao.vakinha.com.br/?campaignId=6290381&buttonColor=24ca68&headerColor=24ca68" style="width: 100%; height: calc(100% - 40px); border: none;"></iframe>
   </div>
 
-  <!-- Botão Redondo Flutuante -->
-  <button onclick="toggleDonationBox()" style="background: #24ca68; color: white; border: none; border-radius: 50px; padding: 12px 20px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.25); display: flex; align-items: center; gap: 8px; font-size: 15px;">
+  <!-- Botão Redondo Flutuante Pulsante (com ID para a animação) -->
+  <button id="btn-doacao-pulsante" onclick="toggleDonationBox()" style="background: #24ca68; color: white; border: none; border-radius: 50px; padding: 12px 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 15px; outline: none;">
     💚 Fazer Doação
   </button>
 
